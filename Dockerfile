@@ -14,6 +14,6 @@ RUN cp config.example.js config.js
 RUN sed -i s/127.0.0.1/0.0.0.0/ config.js
 RUN sed -i s/2368/80/ config.js
 
-VOLUME /opt/ghost/content/data
+VOLUME /opt/ghost/content
 
 CMD ["npm", "start", "--production"]
