@@ -1,9 +1,9 @@
-FROM node
+FROM ubuntu
 
 RUN apt-get update
-RUN apt-get install -y unzip
+RUN apt-get install -y unzip npm nodejs-legacy
 
-ADD https://ghost.org/zip/ghost-0.5.3.zip /tmp/ghost.zip
+ADD https://ghost.org/zip/ghost-0.7.2.zip /tmp/ghost.zip
 RUN mkdir -p /opt/ghost
 RUN unzip /tmp/ghost.zip -d /opt/ghost
 
